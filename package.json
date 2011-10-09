@@ -22,7 +22,8 @@
     "vows": "latest"
   },
   "scripts": {
-    "test": "vows --spec"
+    "test": "vows --spec",
+    "start": "node gendoc.js > README.md"
   }
 
 }
