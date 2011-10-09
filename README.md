@@ -1,5 +1,19 @@
 # Cebelca.biz and InvoiceFox.com API JS Library
-Needs some more testing! Can also be used with HTML5 browsers using porter.js
+Realy needs some more testing! This library can also be used with "modern" browsers using porter.js http://github.com/hij1nx/Porter
+
+
+    var cebelcaAPI = require('./lib/cebelcabiz-api.js')
+
+Run tests with:
+
+    npm test
+
+Make docs with:
+
+    npm start
+
+# JS API
+
 ## Function: [instance].invoice.create
 
 ### Resource: POST https://www.cebelca.biz/API?_r=invoice-sent&_m=insert-into
@@ -21,6 +35,7 @@ Add invoice head and get the id
         // do something...
       }
     );
+
 
 ## Function: [instance].invoice.add
 
@@ -47,6 +62,7 @@ Add invoice body line and get the id - invoice can have multiple body lines
       }
     );
 
+
 ## Function: [instance].invoice.assignPartner
 
 ### Resource: POST https://www.cebelca.biz/API?_r=partner&_m=assure
@@ -68,6 +84,7 @@ Assure partner (add if it doesn't exits and get the id, otherwise just get the i
         // do something...
       }
     );
+
 
 ## Function: [instance].invoice.delete
 
@@ -105,6 +122,7 @@ Export PDF based on invoice_id
       }
     );
 
+
 ## Function: [instance].generate.doc
 
 ### Resource: GET https://www.cebelca.biz/API-doc?id=:invoice_id&res=invoice-sent
@@ -120,6 +138,7 @@ Export Word doc based on invoice_id
         // do something...
       }
     );
+
 
 ## Function: [instance].generate.otf
 
@@ -154,6 +173,7 @@ List all partners
       }
     );
 
+
 ## Function: [instance].partner.get_add
 
 ### Resource: POST https://www.cebelca.biz/API?_r=partner&_m=assure
@@ -176,6 +196,7 @@ Assure partner (add if it doesn't exits and get the id, otherwise just get the i
       }
     );
 
+
 ## Function: [instance].partner.delete
 
 ### Resource: POST https://www.cebelca.biz/API?_r=partner&_m=delete
@@ -194,6 +215,5 @@ Delete partner based on id_partner
         // do something...
       }
     );
-
 
 
