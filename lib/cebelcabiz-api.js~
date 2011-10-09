@@ -1,0 +1,35 @@
+(function () {
+  "use strict";
+
+  var Porter = require('./node-porter').Porter;
+
+  var CebelcaAPI = {
+
+    plugins: {
+      list: ['post', 'getPlugins'],
+      status: ['post', 'statusPlugin'],
+      activate: ['post', 'activatePlugin'],
+      deactivate: ['post', 'deactivatePlugin'],
+    },
+
+    options: {
+      list: ['post', 'getOptions'],
+    },
+
+    maintenance: {
+      status: ['post', 'getMaintenance'],
+      update: ['post', 'setMaintenance'],
+    },
+
+
+  };
+
+  function apiExport(api_key, username, password) {
+    return new Porter(CebelcaAPI).use({
+      headers: {'Authorization' : 'Basic ' + btoa(username+':'+password)},
+      endpoint: "/wp-admin/admin-ajax.php?action=read_rest_api_request&req="
+    });
+  }
+  module.exports = apiExport;
+
+}());

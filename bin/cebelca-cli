@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+var argv = require('optimist');
+
+
+//define
+
+argv
+.usage('Usage: cebelca-cli -h [apikey] -u [username] -p [password] COMMAND')
+.demand('h')
+  .alias('h', 'apikey')
+  .describe('h', 'Specify your api key')
+.demand('u')
+  .alias('u', 'username')
+  .describe('u', 'Your login username')
+.demand('p')
+  .alias('p', 'password')
+  .describe('p', 'Your login password')
+.argv;

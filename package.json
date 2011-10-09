@@ -1,0 +1,28 @@
+{
+  "author": "Janez Troha <janez.troha@gmail.com> (http://www.dz0ny.info)",
+  "name": "cebelcabiz-api",
+  "description": "Cebelca.biz API",
+  "version": "0.0.1",
+  "homepage": "http://www.dz0ny.info",
+  "bin": { "cebelca-cli": "./bin/cebelca-cli" },
+  "keywords": ["invoicefox", "administration", "remote", "cli"],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/dz0ny/cebelcabiz-api.git"
+  },
+  "engines": {
+    "node": ">=0.4.5"
+  },
+  "dependencies": {
+    "optimist": ">=0.2.3",
+    "futures": ">=1.9.4",
+    "request": "latest"
+  },
+  "devDependencies": {
+    "vows": "latest"
+  },
+  "scripts": {
+    "test": "vows --spec"
+  }
+
+}
