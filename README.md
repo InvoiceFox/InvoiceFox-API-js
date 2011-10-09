@@ -1,3 +1,5 @@
+# Cebelca.biz and InvoiceFox.com API JS Library
+Needs some more testing! Can also be used with HTML5 browsers using porter.js
 ## Function: [instance].invoice.create
 
 ### Required payload(fixme):
