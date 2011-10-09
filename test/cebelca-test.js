@@ -22,7 +22,7 @@ http.createServer(function (req, res) {
 vows.describe('cebelcabiz-cli api library')
 .addBatch({
   'Cebelca API': {
-    topic: cbzapi("123456789abcdef", "user", "password"),
+    topic: cbzapi("123456789abcdef"),
     'has function use': function (topic) {
       assert.isFunction(topic.use);
     },
@@ -35,6 +35,3 @@ vows.describe('cebelcabiz-cli api library')
   }
 })
 .export(module);
-
-
-cbzapi("123456789abcdef", "user", "password").describe()
